@@ -4,12 +4,6 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-
-fs.writeFile('index.html', 'Hello World from index.html', function (app) {
-  if (app) throw app;
-  console.log('The data was saved to file');
-});
-
 fs.readFile("index.html", function(err, html) {
 	if(err) {
 		throw err;
